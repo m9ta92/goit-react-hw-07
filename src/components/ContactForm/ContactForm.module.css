@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 178px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.formEl {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.input {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: fit-content;
+}
+
+.error {
+    color: red;
+    font-size: small;
+}
+
+.addBtn {
+    text-decoration: none;
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid black;
+    padding: 6px;
+    background-color: rgb(114, 224, 224);
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+}
