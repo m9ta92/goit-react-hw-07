@@ -35,8 +35,7 @@ img {
 
 body {
     /* background-color: rgb(192, 192, 192); */
-    background: linear-gradient(to right, rgb(82, 82, 202), rgb(250, 117, 117), rgb(82, 82, 202),
-            rgb(250, 117, 117));
+    background: linear-gradient(to right, rgb(82, 82, 202), rgb(255, 0, 0));
     font-family: "Montserrat", serif;
     letter-spacing: 0.6px;
 }
