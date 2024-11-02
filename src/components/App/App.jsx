@@ -3,7 +3,7 @@ import css from './App.module.css';
 import ContactForm from '../ContactForm/ContactForm.jsx';
 import SearchBox from '../SearchBox/SearchBox.jsx';
 import Loader from '../Loader/Loader.jsx';
-import ContactsList from '../ContactsList/ContactsList.jsx';
+import ContactList from '../ContactList/ContactList.jsx';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -32,7 +32,7 @@ function App() {
 				<SearchBox />
 				{isLoading && !error && <Loader />}
 				{contacts ? (
-					<ContactsList contacts={contacts} />
+					<ContactList contacts={contacts} />
 				) : (
 					<b>Request in progress...</b>
 				)}
