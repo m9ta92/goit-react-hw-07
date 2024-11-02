@@ -4,20 +4,25 @@
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 25px;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: rgb(0, 0, 0, 0.1);
+
 }
 
 .input {
     border: none;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 8px;
     margin: 5px 0px;
     width: 300px;
     letter-spacing: 2px;
+}
+
+.input::placeholder {
+    color: black;
 }
 
 .input:hover {
