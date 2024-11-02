@@ -1,6 +1,8 @@
 .form {
     display: flex;
     flex-direction: column;
+    min-width: 314px;
+    max-width: 314px;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
