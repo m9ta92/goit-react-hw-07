@@ -47,6 +47,7 @@
     border-radius: 50%;
     background: transparent;
     font-size: larger;
+    color: black;
 }
 
 .btn:hover {
