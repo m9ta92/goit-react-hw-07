@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    padding: 10px;
+    min-width: 314px;
+    max-width: 314px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}

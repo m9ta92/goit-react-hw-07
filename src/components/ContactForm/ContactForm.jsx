@@ -1,15 +1,13 @@
-import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
-
+import css from './ContactForm.module.css';
+import { IoPersonAddSharp } from 'react-icons/io5';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import { nanoid } from 'nanoid';
 
-import css from './ContactForm.module.css';
+import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contactsOps';
 
 const ContactForm = () => {
 	const dispatch = useDispatch();
-	const phoneNumberRegex = /^[0-9]{3}?[-\s.]?[0-9]{2}[-\s.]?[0-9]{2}$/;
 
 	const handleSubmit = (values, actions) => {
 		onAddContact(values);
@@ -19,11 +17,11 @@ const ContactForm = () => {
 	const onAddContact = formData => {
 		const newContact = {
 			...formData,
-			id: nanoid(),
 		};
 		dispatch(addContact(newContact));
 	};
 
+	const phoneNumberRegex = /^[0-9]{3}?[-\s.]?[0-9]{2}[-\s.]?[0-9]{2}$/;
 	const AddContactSchema = Yup.object({
 		name: Yup.string()
 			.min(3, 'Too short!')
@@ -42,27 +40,25 @@ const ContactForm = () => {
 		>
 			<Form className={css.form}>
 				<label>
-					<span className={css.formEl}>Name:</span>
 					<Field
 						className={css.input}
 						type="text"
 						name="name"
 						placeholder="Enter your name..."
 					/>
-					<ErrorMessage className={css.error} name="name" component="span" />
 				</label>
+				<ErrorMessage className={css.error} name="name" component="span" />
 				<label>
-					<span className={css.formEl}>Number:</span>
 					<Field
 						className={css.input}
 						type="text"
 						name="number"
 						placeholder="Enter your number..."
 					/>
-					<ErrorMessage className={css.error} name="number" component="span" />
 				</label>
-				<button className={css.addBtn} type="submit">
-					Add contact
+				<ErrorMessage className={css.error} name="number" component="span" />
+				<button className={css.btn} type="submit">
+					<IoPersonAddSharp />
 				</button>
 			</Form>
 		</Formik>

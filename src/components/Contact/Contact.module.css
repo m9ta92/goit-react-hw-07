@@ -1,10 +1,19 @@
-.contactCard {
+.item {
     display: flex;
-    width: 178px;
-    border: 1px solid black;
+    flex-wrap: wrap;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
     padding: 10px;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    min-width: 290px;
+    max-width: 290px;
+}
+
+.item:hover {
+    border: 1px solid black;
+    transform: scale(1.02);
 }
 
 .title {
@@ -13,13 +22,18 @@
     margin-bottom: 5px;
 }
 
+.phone {
+    color: green;
+    font-size: large;
+}
+
 .deleteBtn {
     display: flex;
     align-items: center;
     margin-left: auto;
     text-decoration: none;
     background: none repeat scroll 0 0 transparent;
-    border: 2px solid red;
+    border: 3px solid red;
     border-radius: 50%;
     height: 30px;
 }

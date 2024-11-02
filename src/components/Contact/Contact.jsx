@@ -1,31 +1,29 @@
-import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
-
+import css from './Contact.module.css';
 import { TbUserFilled } from 'react-icons/tb';
 import { TbPhoneFilled } from 'react-icons/tb';
 
-import css from './Contact.module.css';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from '../../redux/contactsOps';
 
 const Contact = ({ id, name, number }) => {
 	const dispatch = useDispatch();
 
-	const onDeleteContact = contactId => {
-		dispatch(deleteContact(contactId));
-	};
-
 	return (
-		<div className={css.contactCard}>
+		<div className={css.item}>
 			<div>
 				<div className={css.title}>
 					<TbUserFilled />
 					<p>{name}</p>
 				</div>
 				<div className={css.title}>
-					<TbPhoneFilled />
+					<TbPhoneFilled className={css.phone} />
 					<a href="tel:">{number}</a>
 				</div>
 			</div>
-			<button className={css.deleteBtn} onClick={() => onDeleteContact(id)}>
+			<button
+				className={css.deleteBtn}
+				onClick={() => dispatch(deleteContact(id))}
+			>
 				❌
 			</button>
 		</div>
