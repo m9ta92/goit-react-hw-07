@@ -8,11 +8,12 @@ import ContactList from '../ContactList/ContactList.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contactsOps.js';
+import {} from '../../redux/contactsSlice.js';
 import {
 	selectContacts,
 	selectError,
 	selectIsLoading,
-} from '../../redux/contactsSlice.js';
+} from '../../redux/selectors.js';
 
 function App() {
 	const dispatch = useDispatch();
